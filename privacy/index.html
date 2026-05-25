@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Stellar</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0a0a10;color:#e4e4f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:680px;margin:0 auto;padding:60px 24px 80px}
+  .back{color:rgba(167,139,250,0.8);font-size:14px;text-decoration:none;display:inline-block;margin-bottom:40px}
+  .back:hover{color:#a78bfa}
+  .glyph{color:#a78bfa;font-size:32px;margin-bottom:16px}
+  h1{font-size:28px;font-weight:700;letter-spacing:-0.4px;margin-bottom:8px}
+  .updated{color:rgba(210,210,225,0.4);font-size:13px;margin-bottom:40px}
+  h2{font-size:16px;font-weight:600;color:#a78bfa;text-transform:uppercase;letter-spacing:0.8px;margin:36px 0 12px}
+  p{color:rgba(210,210,225,0.75);font-size:15px;line-height:24px;margin-bottom:12px}
+  ul{color:rgba(210,210,225,0.75);font-size:15px;line-height:24px;padding-left:20px;margin-bottom:12px}
+  ul li{margin-bottom:6px}
+  a{color:#a78bfa}
+  .highlight{background:rgba(167,139,250,0.08);border-left:3px solid #a78bfa;padding:14px 18px;border-radius:0 8px 8px 0;margin:16px 0}
+  .highlight p{margin:0}
+</style>
+</head>
+<body>
+  <a class="back" href="../">← Stellar</a>
+
+  <div class="glyph">✦</div>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: May 2026</p>
+
+  <p>Stellar ("we", "our", or "us") is built by Antony Levell. This policy explains what data we collect, how we use it, and the choices you have.</p>
+
+  <div class="highlight">
+    <p>The short version: your journal entries are encrypted on your device. We cannot read them. Your thoughts are yours.</p>
+  </div>
+
+  <h2>What We Collect</h2>
+  <p><strong>Account information.</strong> When you create an account we collect your email address and, if you sign in with Apple, an Apple-anonymised email relay. We use this solely to authenticate you and let you restore your data on a new device.</p>
+  <p><strong>Journal entries.</strong> When you submit a journal entry, the text is sent to our AI processing service (Google Gemini, via a server-side function) to generate your knowledge graph. We do not store the raw text on our servers beyond the duration of that processing call. The resulting knowledge graph — the nodes, links, and insights — is encrypted on your device before being uploaded to our servers. Only you hold the key.</p>
+  <p><strong>Subscription data.</strong> We use RevenueCat to manage subscriptions. RevenueCat receives your Apple ID purchase information and subscription status. We do not see your full payment details.</p>
+  <p><strong>Usage data.</strong> We do not use analytics SDKs. We do not track what you write, how long you use the app, or which features you tap.</p>
+
+  <h2>How We Use Your Data</h2>
+  <ul>
+    <li>To authenticate your account and sync your encrypted graph across your devices</li>
+    <li>To process journal entries through AI and build your knowledge graph</li>
+    <li>To manage your subscription and restore purchases</li>
+    <li>To respond to support requests you send us</li>
+  </ul>
+  <p>We do not sell your data. We do not use your journal content for advertising, model training, or any purpose other than generating your personal graph.</p>
+
+  <h2>Third-Party Services</h2>
+  <ul>
+    <li><strong>Supabase</strong> (supabase.com) — hosts our authentication system and stores your encrypted graph payload. Supabase cannot decrypt your data.</li>
+    <li><strong>Google Gemini</strong> (ai.google.dev) — processes your journal entry text server-side to produce graph mutations. Text is processed in real time and not retained by us. Google's own data practices apply to this processing; see <a href="https://ai.google.dev/gemini-api/terms" target="_blank">Google AI Terms</a>.</li>
+    <li><strong>RevenueCat</strong> (revenuecat.com) — manages in-app subscription state and purchase verification.</li>
+    <li><strong>Apple</strong> — handles all payment processing for subscriptions.</li>
+  </ul>
+
+  <h2>Encryption</h2>
+  <p>Your knowledge graph is encrypted on your device using a key derived from your user ID and stored in your device's secure enclave (iOS Keychain). The encrypted payload is what reaches our servers. We do not hold your encryption key and cannot decrypt your data even if compelled to.</p>
+  <p>Note: the raw text of a journal entry is transmitted to Google Gemini for AI processing. Once processing is complete, the resulting graph (not the raw text) is what we store, and that graph is encrypted.</p>
+
+  <h2>Data Retention & Deletion</h2>
+  <p>Your account and all associated encrypted data is retained until you delete it. To permanently delete your account and all data, go to <strong>Profile → Delete Account</strong> inside the app. Deletion is immediate and irreversible — we cannot recover your data after this.</p>
+
+  <h2>Children</h2>
+  <p>Stellar is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us personal information, contact us and we will delete it.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>If we make material changes we will update the date at the top of this page. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about your privacy? Email us: <a href="mailto:antonylevell34@gmail.com">antonylevell34@gmail.com</a></p>
+</body>
+</html>
