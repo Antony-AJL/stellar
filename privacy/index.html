@@ -38,7 +38,7 @@
   <p><strong>Account information.</strong> When you create an account we collect your email address and, if you sign in with Apple, an Apple-anonymised email relay. We use this solely to authenticate you and let you restore your data on a new device.</p>
   <p><strong>Journal entries.</strong> When you submit a journal entry, the text is sent to our AI processing service (Google Gemini, via a server-side function) to generate your knowledge graph. We do not store the raw text on our servers beyond the duration of that processing call. The resulting knowledge graph — the nodes, links, and insights — is encrypted on your device before being uploaded to our servers. Only you hold the key.</p>
   <p><strong>Subscription data.</strong> We use RevenueCat to manage subscriptions. RevenueCat receives your Apple ID purchase information and subscription status. We do not see your full payment details.</p>
-  <p><strong>Usage data.</strong> We do not use analytics SDKs. We do not track what you write, how long you use the app, or which features you tap.</p>
+  <p><strong>Usage data.</strong> We use PostHog to collect anonymous product analytics. This covers onboarding funnel events (e.g. which step you reached), paywall interactions, and account creation method. We never send the contents of your journal entries to PostHog. You are identified by your user ID once you create an account.</p>
 
   <h2>How We Use Your Data</h2>
   <ul>
@@ -54,6 +54,7 @@
     <li><strong>Supabase</strong> (supabase.com) — hosts our authentication system and stores your encrypted graph payload. Supabase cannot decrypt your data.</li>
     <li><strong>Google Gemini</strong> (ai.google.dev) — processes your journal entry text server-side to produce graph mutations. Text is processed in real time and not retained by us. Google's own data practices apply to this processing; see <a href="https://ai.google.dev/gemini-api/terms" target="_blank">Google AI Terms</a>.</li>
     <li><strong>RevenueCat</strong> (revenuecat.com) — manages in-app subscription state and purchase verification.</li>
+    <li><strong>PostHog</strong> (posthog.com, EU cloud) — product analytics. Receives onboarding and paywall events. Never receives journal content. See <a href="https://posthog.com/privacy" target="_blank">PostHog's privacy policy</a>.</li>
     <li><strong>Apple</strong> — handles all payment processing for subscriptions.</li>
   </ul>
 
